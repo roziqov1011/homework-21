@@ -1,0 +1,119 @@
+@import "../varibles";
+@import "../mixer";
+
+
+.cards-section {
+    background-color: #fafafa;
+}
+
+.block-cards {
+    padding-bottom: 80px;
+}
+
+.block-card__title {
+    margin-block-start: 0em;
+    margin-block-end: 0.83em;
+    padding-top: 80px;
+    color: $title-color;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 40px;
+    line-height: 64px;
+    letter-spacing: -0.714286px;
+}
+
+.block-card__list {
+    @include reset-list;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.block-card__item {
+    margin-bottom: 20px;
+    width: 255px;
+    height: auto;
+    background-color: #fff;
+    box-shadow: 0px 0px 8px -4px rgba(0, 0, 0, 0.53);
+}
+.card-item__img__wrap{
+    width: 255px;
+    height: 255px;
+    overflow: hidden;
+}
+.block-card__item:hover .card-item__img{
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+.card-item__img{
+    width: 255px;
+    height: 255px;
+    transition: all 0.2s ease-in;
+    filter: grayscale(66%);
+}
+
+
+
+
+
+.card-item__info {
+    padding: 24px;
+}
+
+.card-item__spen {
+    color: $site-text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 18px;
+    letter-spacing: -0.15625px;
+
+}
+
+.card-item__link {
+    @include reset-link;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 20px;
+    color: #2D314D;
+    letter-spacing: -0.285714px;
+    padding-top: 8px;
+}
+
+.card-item__link:hover {
+    color: #30C88F;
+}
+
+.card-item__text {
+    color: $site-text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.203125px;
+}
+@include breakpoint-laptop(750px){
+    .block-cards{
+        text-align: center;
+    }
+    .block-card__list {
+        justify-content: space-around;
+    }
+}
+@include breakpoint-iPad(550px){
+    .block-card__item{
+        width: 95%;
+    }
+    .card-item__img__wrap{
+        width: 100%;
+        height: auto;
+        
+    }
+    .card-item__img{
+        width: 100%;
+        height: auto;
+    }
+}

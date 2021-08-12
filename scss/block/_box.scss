@@ -1,0 +1,122 @@
+@import "../varibles";
+@import "../mixer";
+
+.box-section {
+    background-color: #F4F5F7;
+}
+
+.box {
+    margin-top: -156px;
+    padding-top: 96px;
+    padding-bottom: 94px;
+}
+
+.box-title {
+    color: $title-color;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 40px;
+    line-height: 64px;
+    letter-spacing: -0.714286px;
+    margin: 0;
+
+}
+
+.box-text {
+    color: $site-text;
+    max-width: 635px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.28125px;
+    margin: 0;
+}
+
+.box-list {
+    @include reset-list;
+    margin-top: 72px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box-list__item {
+    width: 255px;
+    margin-bottom: 20px;
+}
+
+
+
+
+@keyframes card-list__item {
+    0% {
+        transform: rotate(360deg);
+
+    }
+
+    100% {
+        transform: rotate(0deg);
+
+    }
+}
+
+
+
+.box-item__img {
+    position: relative;
+    animation: 3s linear 0s infinite reverse card-list__item;
+    -webkit-animation: 3s linear 0s infinite reverse card-list__item;
+}
+
+.box-item__title {
+    font-style: normal;
+    color: $title-color;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -0.428571px;
+    margin-top: 40px;
+    margin-bottom: 26px;
+
+}
+
+.box-item__text {
+
+    color: $site-text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: -0.25px;
+}
+
+
+@include breakpoint-desktop(1060px) {
+    .box-list__item {
+        text-align: center;
+    }
+}
+
+@include breakpoint-laptop(750) {
+    .box {
+        text-align: center;
+    }
+}
+@include breakpoint-iPad(550px){
+ .box-list__item{
+     width: 95%;
+ }
+}
+
+@include breakpoint-mobile(440px) {
+    .box-title {
+        font-weight: 100;
+        font-size: 32px;
+        line-height: 38px;
+        text-align: center;
+        letter-spacing: -0.571429px;
+        margin-bottom: 14px;
+    }
+}
