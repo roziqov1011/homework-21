@@ -111,9 +111,6 @@
     .checkbox:checked.hamburger{
         transform: translateX(-50px);
     }
-    .site-header__list .header-hamburger__btn:checked ~ .checkbox > .hamburger{
-        display: none;
-    }
     .header-hamburger__btn:checked + .site-nav{
         display: block;
     }
